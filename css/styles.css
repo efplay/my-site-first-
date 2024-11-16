@@ -1,0 +1,358 @@
+/* Основные стили для страницы */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(https://images.wallpaperscraft.ru/image/single/luna_planeta_noch_1041646_1920x1080.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+/* Навигация */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--accent-color);
+    padding: 15px 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+
+/* Панель настроек */
+
+.settings-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: var(--accent-color);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.settings-panel {
+    position: fixed;
+    top: 50px;
+    right: 10px;
+    background-color: var(--background-color);
+    border: 1px solid var(--text-color);
+    padding: 20px;
+    display: none;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.settings-button:hover+.settings-panel,
+.settings-panel:hover {
+    display: block;
+}
+
+.settings-button.active {
+    display: block;
+}
+
+.settings-panel label {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.settings-panel input[type="radio"] {
+    margin-right: 5px;
+}
+
+
+/* Главная секция */
+
+#hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, var(--background-color));
+    color: var(--text-color);
+}
+
+#hero h1 {
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+
+#scroll-arrow {
+    font-size: 2em;
+    color: var(--text-color);
+    margin-top: 20px;
+    animation: bounce 2s infinite;
+}
+
+
+/* Bounce анимация для стрелки */
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+/* Разделы */
+
+section {
+    padding: 60px 20px;
+    margin: 40px 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* About Me */
+
+.about-section {
+    padding: 50px;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    text-align: center;
+}
+
+#about {
+    background: linear-gradient(135deg, var(--background-color));
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#about p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+
+/* Portfolio */
+
+#portfolio {
+    background: linear-gradient(135deg, var(--background-color));
+    text-align: center;
+}
+
+#portfolio h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.portfolio-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.portfolio-item {
+    background-color: var(--accent-color);
+    padding: 30px;
+    width: 250px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--background-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* home section */
+
+.home-section {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, var(--background-color));
+    color: var(--text-color);
+}
+
+.home-section h1 {
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+
+
+/* explore more*/
+
+.explore-section {
+    padding: 120px 20px;
+    background: var(--explore-background-gradient);
+    overflow: hidden;
+    border-radius: 20px;
+    color: var(--text-color);
+    text-align: center;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin-bottom: 100px;
+}
+
+.explore-section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.explore-container {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+    padding: 20px;
+}
+
+.explore-container h2 {
+    position: relative;
+    display: inline-block;
+    font-size: 3em;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+.explore-button {
+    display: inline-block;
+    padding: 18px 45px;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    text-decoration: none;
+    margin-top: 30px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1.2em;
+    font-weight: 600;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.explore-button:hover {
+    background-color: #838383;
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+
+/* Contact */
+
+#contact {
+    background: linear-gradient(135deg, var(--background-color));
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    color: var(--text-color);
+    /* Оставляем черными */
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+form input,
+form textarea {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid var(--text-color);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: 1em;
+}
+
+form textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+form button {
+    padding: 15px;
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    color: var(--background-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: var(--text-color);
+    color: var(--background-color);
+}
+
+
+/* Темы: светлая и темная */
+
+ :root {
+    --background-color: #e7e7e7;
+    --text-color: #000000;
+    --accent-color: #919191;
+}
+
+[data-theme="dark"] {
+    --background-color: #1b1b1b;
+    --text-color: #c4c4c4;
+    --accent-color: #56565e;
+}
+
+
+/* Стили для активных ссылок */

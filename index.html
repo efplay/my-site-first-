@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Home - My Modern Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Навигация -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About Me</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--home section-->
+
+    <section id="home" class="home-section">
+        <div class="home-content">
+            <h1> Welcome to my Website</h1>
+            <p>Discover my work, my story, and explore more about what i do</p>
+            <a href="#explore-more"></a>
+
+        </div>
+    </section>
+
+    <!-- Кнопка настроек -->
+    <div id="settings-button" class="settings-button">⚙️</div>
+    <div class="settings-panel">
+        <label> Choose Theme: </label>
+        <label>
+            <input type = "radio" name ="theme"  value="light" checked> Light
+        </label>
+        <label>
+            <input type = "radio" name ="theme"  value="dark" > Dark
+        </label>
+    </div>
+
+    <!-- Главная секция с заголовком и обрезанными углами -->
+    <section id="hero">
+        <div class="clipped-box">
+            <h1>My Portfolio</h1>
+        </div>
+        <div id="scroll-arrow">&#8595</div>
+    </section>
+
+    <!-- Блок с ссылками -->
+    <section id="explore-more" class="explore-section">
+        <div class="explore-container">
+            <h2>Explore More</h2>
+            <p> Discover exciting projects, insightful articles, and innovative design concepts.</p>
+            <a href="#portfolio" class="explore-button">View Portfolio</a>
+        </div>
+    </section>
+
+    <!-- Раздел About Me -->
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>
+            I am a passionate web developer with a love for creating interactive and dynamic websites.
+        </p>
+    </section>
+
+    <!-- Раздел Portfolio -->
+    <section id="portfolio" class="section">
+        <h2>Portfolio</h2>
+        <div class="portfolio-gallery">
+            <div class="portfolio-item">Project 1</div>
+            <div class="portfolio-item">Project 2</div>
+            <div class="portfolio-item">Project 3</div>
+        </div>
+    </section>
+
+    <!-- Раздел Contact -->
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <form action="#" method="post">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

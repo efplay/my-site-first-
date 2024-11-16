@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+</head>
+
+<body>
+    <ul>Header</ul>
+</body>
+
+</html>
+
+/* Основные стили */ body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; box-sizing: border-box; background-color: #f4f4f4; color: #333; background-color: var(--background-color); color: var(--text-color); transition: background-color 0.3s
+ease, color 0.3s ease; } header { background-color: #333; padding: 10px 0; text-align: center; } nav ul { list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; } nav ul li { margin: 0 15px; } .nav-link { color: #fff; text-decoration:
+none; font-size: 1.2em; padding: 10px 20px; } .nav-link:hover { background-color: #555; border-radius: 5px; } /* Центрирование заголовка на главной странице */ #hero { display: flex; flex-direction: column; justify-content: center; align-items: center;
+height: 100vh; /* 100% высоты окна */ background-color: #f9f9f9; } /* Блок с обрезанными углами для заголовка */ .clipped-box { background-color: #f76c6c; /* Цвет блока */ padding: 30px 60px; clip-path: polygon(15% 0%, 85% 0%, 100% 100%, 0% 100%); /*
+Обрезка углов */ color: white; text-align: center; margin-bottom: 20px; } .clipped-box h1 { margin: 0; font-size: 3em; font-family: 'Arial', sans-serif; } /* Стрелка вниз */ #scroll-arrow { width: 0; height: 0; border-left: 30px solid transparent; border-right:
+30px solid transparent; border-top: 40px solid #333; margin-top: 20px; cursor: pointer; animation: bounce 1.5s infinite; } @keyframes bounce { 0%, 20%, 50%, 80%, 100% { transform: translateY(0); } 40% { transform: translateY(10px); } 60% { transform:
+translateY(5px); } } /* Стили разделов */ .section { padding: 100px 20px; background-color: #f4f4f4; text-align: center; } .section:nth-child(even) { background-color: #fff; } .section h2 { font-size: 2.5em; margin-bottom: 20px; } .section p { font-size:
+1.2em; line-height: 1.6; } /* Portfolio раздел */ .portfolio-gallery { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; } .portfolio-item { background-color: #f76c6c; width: 200px; height: 200px; display: flex; justify-content: center;
+align-items: center; color: white; font-size: 1.5em; border-radius: 15px; transition: transform 0.3s; } .portfolio-item:hover { transform: scale(1.05); } /* Contact раздел */ form { display: flex; flex-direction: column; align-items: center; max-width:
+600px; margin: 0 auto; } form label { margin: 10px 0 5px; font-size: 1.2em; } form input, form textarea { width: 100%; padding: 10px; font-size: 1.1em; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; } form textarea { resize: vertical;
+height: 150px; } button { padding: 10px 20px; font-size: 1.2em; background-color: #f76c6c; color: white; border: none; border-radius: 5px; cursor: pointer; } button:hover { background-color: #e65b5b; } /* Блок с ссылками */ #links-section { height: 100vh;
+padding: 50px; background-color: #f4f4f4; text-align: center; } #links-section h2 { font-size: 3em; margin-bottom: 20px; } #links-section ul { list-style: none; padding: 0; } #links-section ul li { margin: 10px 0; } #links-section .link { font-size: 1.5em;
+color: #333; text-decoration: none; transition: color 0.3s; } #links-section .link:hover { color: #555; } /*style for active link in navigation*/ .nav-link.active { background-color: #f76c6c; color: white; border-radius: 5px; } /* animation for block
+portfolio */ .portfolio-item { opacity: 0; transform: translateY(50px); transition: all opacity 0.5s ease-in-out; } .portfolio-item.visible { opacity: 1; transform: translateY(0); } /*adaptation for navigation*/ @media (max-width: 768px) { nav ul { flex-direction:
+column; margin: 0; padding: 0; } nav ul li { margin-bottom: 10px; } } /*html { scroll-behavior: smooth; } */ /* css for active links */ .nav-link.active { color: #ff6600; font-weight: bold; } /* Basic theme*/ :root { --background-color: #ffffff; --text-color:
+#000000; --accent-color: #ffcc00: } /* dark theme*/ [data-theme="dark"] { --background-color: #1e1e1e; --text-color: #ffffff; --accent-color: #ffcc00: } /* Using themes in the styles*/ .nav-link { color: var (--text-color); } button#theme-toggle { background-color:
+var(--accent-color); color: var (--text-color); border: none; padding: 10px 20px; cursor: pointer; transition: background-color 0.3s ease, color 0.3s ease; } /* for additinal styles*/ button#theme-toggle:hover { background-color: var(--text-color); color:
+var(--accent-color); }
