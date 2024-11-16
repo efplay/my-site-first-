@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Получаем элементы кнопки переключения темы и настройки
+  
     const themeToggleButton = document.getElementById('theme-toggle');
     const settingsButton = document.getElementById('settings-button');
     const settingsPanel = document.querySelector('.settings-panel');
 
-    // Переключение тем по радиокнопкам
+    
     const themeRadioButtons = document.querySelectorAll('input[name="theme"]');
     themeRadioButtons.forEach(radio => {
         radio.addEventListener('change', function() {
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Создаем панель настроек и добавляем в DOM, если её нет
+    
     if (!settingsPanel) {
         const newSettingsPanel = document.createElement('div');
         newSettingsPanel.className = 'settings-panel';
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.appendChild(newSettingsPanel);
     }
 
-    // Показ панели настроек при наведении
+
     settingsButton.addEventListener('mouseover', function() {
         settingsPanel.style.display = 'block';
     });
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
         settingsPanel.style.display = 'none';
     });
 
-    // Переключение темы при нажатии на кнопку Toggle
+
     themeToggleButton.addEventListener('click', function() {
         const currentTheme = document.documentElement.getAttribute('data-theme');
         if (currentTheme === 'dark') {
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Плавный скролл при нажатии на стрелку
+
     const scrollArrow = document.getElementById('scroll-arrow');
     if (scrollArrow) {
         scrollArrow.addEventListener('click', function() {
@@ -56,12 +56,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Прокрутка страницы вверх при перезагрузке
+
     window.addEventListener('beforeunload', function() {
         window.scrollTo(0, 0);
     });
 
-    // Подсветка активной секции в меню
+
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-link');
 
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Плавный скролл при клике на ссылки меню
+  
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Анимация для блока портфолио при скролле
+
     const portfolioItems = document.querySelectorAll('.portfolio-item');
     window.addEventListener('scroll', () => {
         portfolioItems.forEach(item => {
