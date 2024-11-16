@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const currentTheme = document.documentElement.getAttribute('data-theme');
         if (currentTheme === 'dark') {
             document.documentElement.setAttribute('data-theme', 'light');
-            document.getElementById('light-theme').checked = true; // Синхронизация с радиокнопкой
+            document.getElementById('light-theme').checked = true;
         } else {
             document.documentElement.setAttribute('data-theme', 'dark');
             document.getElementById('dark-theme').checked = true;
