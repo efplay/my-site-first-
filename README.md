@@ -45,6 +45,3 @@ Contributions are welcome! If you'd like to improve the website or fix issues:
 4. Push your changes:
    ```bash
    git push origin feature-name
-5. Open a Pull Request.
-
----
